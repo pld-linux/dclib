@@ -17,7 +17,6 @@ Requires:	libxml2 > 2.0.0
 Requires:	pth
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 DirectConnect support library for dcgui-qt.
