@@ -5,13 +5,13 @@
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.3.3
-Release:	4
+Version:	0.3.4
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	e25f9afae22341670fa993eb766aaf1e
+# Source0-md5:	470b3a3cdb0e6f98be592d8bac27b22e
 Patch0:		%{name}-lying_tags.patch
 URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
@@ -79,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS NEWS README ChangeLog
+%doc AUTHORS README
 %attr(755,root,root) %{_libdir}/libdc.so.*.*
 %{_datadir}/dclib
 
