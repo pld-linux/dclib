@@ -1,7 +1,7 @@
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.2.10
+Version:	0.2.13
 Release:	1
 License:	GPL
 Group:		X11/Libraries
