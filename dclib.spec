@@ -13,9 +13,7 @@ BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
-BuildRequires:	pth-devel
 Requires:	libxml2 > 2.0.0
-Requires:	pth
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
