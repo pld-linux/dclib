@@ -1,4 +1,7 @@
+#
+# Conditional build:
 %bcond_with	lying	# lie about the H header (always H:1)
+#
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
