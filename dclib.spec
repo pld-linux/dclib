@@ -14,6 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	qt-devel
+Provides:	%{name} = %{version}%{_beta}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -29,6 +30,7 @@ Summary:	Developement files for dclib
 Summary(pl):	Pliki nag³ówkowe dla dclib
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Provides:	%{name}-devel = %{version}%{_beta}
 
 %description devel
 The header files are only needed for development of programs using the
@@ -43,6 +45,7 @@ Summary:	Static libraries dclib
 Summary(pl):	Statyczne biblioteki dclib
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
+Provides:	%{name}-static = %{version}%{_beta}
 
 %description static
 Static dclib libraries.
