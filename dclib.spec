@@ -2,7 +2,7 @@ Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
 Version:	0.3.3
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		Libraries
@@ -27,7 +27,7 @@ Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt.
 Summary:	Header files for dclib
 Summary(pl):	Pliki nag³ówkowe dla dclib
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	bzip2-devel
 Requires:	libstdc++-devel
 Requires:	libxml2-devel > 2.0.0
@@ -43,7 +43,7 @@ Pliki nag³ówkowe dla dclib.
 Summary:	Static dclib library
 Summary(pl):	Statyczna biblioteka dclib
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static dclib library.
