@@ -35,7 +35,7 @@ The header files are only needed for development of programs using the
 dclib.
 
 %description devel -l pl
-Pliki nag³ówkowe potrzebne tylko przy rozwijaniu programów z u¿yciem 
+Pliki nag³ówkowe potrzebne tylko przy rozwijaniu programów z u¿yciem
 dclib.
 
 %package static
@@ -56,6 +56,7 @@ Statyczne biblioteki dclib.
 %build
 aclocal
 autoconf
+cp -f /usr/share/automake/config.* .
 %configure
 
 %{__make}
@@ -82,7 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_libdir}/*.la
 %attr(755,root,root) %{_libdir}/*.so
-%attr(755,root,root) %{_libdir}/*.so.0
 %attr(755,root,root) %{_includedir}/%{name}/*.h
 
 %files static
