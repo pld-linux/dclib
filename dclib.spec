@@ -1,8 +1,8 @@
 %define		_beta		beta1
 %define		_release	1
 
-Summary:	dclib - libraries for Direct Connect client.
-Summary(pl):	dclib - biblioteki dla klienta Direct Connecta.
+Summary:	dclib - libraries for Direct Connect client
+Summary(pl):	dclib - biblioteki dla klienta Direct Connecta
 Name:		dclib
 Version:	0.2
 Release:	%{_beta}.%{_release}
