@@ -1,12 +1,13 @@
+%define	_snap	040521
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.2.22
-Release:	2
+Version:	0.3
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Libraries
-Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	0254260c91b7300a2b04e760245e1de7
+Source0:	http://dcgui.berlios.de/files/dcgui/snapshot/dc-source-alpha-snapshot.tar.gz
+# Source0-md5:	f2fd65496a2cc6149038e7b87a398beb
 URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
@@ -51,15 +52,26 @@ Static dclib library.
 Statyczna biblioteka dclib.
 
 %prep
-%setup -q
+##%setup -q -n dclib
+cd $RPM_BUILD_DIR
+if [ -d %{name}-%{version} ]; then
+rm -rf %{name}-%{version}
+fi
+mkdir %{name}-%{version}
+cd %{name}-%{version}
+tar xfz %{SOURCE0} -C ./
 
 %build
-cp -f /usr/share/automake/config.sub admin
-%configure
+cd $RPM_BUILD_DIR/%{name}-%{version}/dclib
+##export UNSERMAKE=/usr/share/unsermake/unsermake
+%{__make} -f Makefile.dist
+##cp -f /usr/share/automake/config.sub admin
+%configure --with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+cd $RPM_BUILD_DIR/%{name}-%{version}/dclib/
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
