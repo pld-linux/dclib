@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
+# Source0-md5:	c1c03c77b479044387bf46be2201deb9
 URL:		http://dc.ketelhot.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
