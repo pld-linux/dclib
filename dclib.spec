@@ -1,3 +1,4 @@
+%bcond_with	lying	# lie about the H header (always H:1)
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
@@ -8,6 +9,7 @@ License:	GPL
 Group:		Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	e25f9afae22341670fa993eb766aaf1e
+Patch0:		%{name}-lying_tags.patch
 URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
@@ -53,6 +55,7 @@ Statyczna biblioteka dclib.
 
 %prep
 %setup -q
+%{?with_lying:%patch0 -p1}
 
 %build
 cp -f /usr/share/automake/config.sub admin
