@@ -1,12 +1,12 @@
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.2.19
+Version:	0.2.20
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	eca7b952c2288c3d6b668937aac2a181
+# Source0-md5:	85c5f66f8efbcb416b8aa369e3061d73
 URL:		http://dc.ketelhot.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
