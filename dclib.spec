@@ -55,7 +55,7 @@ Statyczne biblioteki dclib.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 cp -f /usr/share/automake/config.* .
 %configure
 
