@@ -12,7 +12,7 @@ BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libxml2-devel > 2.0.0
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7d
 Requires:	libxml2 > 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
