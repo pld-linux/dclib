@@ -1,8 +1,8 @@
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.2rc4
-Release:	3
+Version:	0.2.5
+Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
@@ -16,7 +16,6 @@ BuildRequires:	pth-devel
 Requires:	libxml2 > 2.0.0
 Requires:	pth
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 DirectConnect support library for dcgui-qt.
@@ -49,7 +48,7 @@ Static dclib library.
 Statyczna biblioteka dclib.
 
 %prep
-%setup -q -n %{name}-%{version} 
+%setup -q
 
 %build
 %configure
