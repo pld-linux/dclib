@@ -1,0 +1,4 @@
+- added Provides and Obsoletes rules
+- Epoch moved up, just after Release
+- replaced "GPL" in License by information - because it was too easy to
+  forget to put proper package license
