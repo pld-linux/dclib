@@ -2,17 +2,17 @@ Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
 Version:	0.2.21
-Release:	1
+Release:	2
 License:	GPL
-Group:		X11/Libraries
+Group:		Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	71b8c1e3f601c505227141dab312c11d
 URL:		http://dc.ketelhot.de/
-BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
-BuildRequires:	libtool
+BuildRequires:	libstdc++-devel
 BuildRequires:	libxml2-devel > 2.0.0
+BuildRequires:	openssl-devel
 Requires:	libxml2 > 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,8 +25,12 @@ Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt.
 %package devel
 Summary:	Header files for dclib
 Summary(pl):	Pliki nag³ówkowe dla dclib
-Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+Requires:	bzip2-devel
+Requires:	libstdc++-devel
+Requires:	libxml2-devel > 2.0.0
+Requires:	openssl-devel
 
 %description devel
 Header files for dclib.
@@ -37,8 +41,8 @@ Pliki nag³ówkowe dla dclib.
 %package static
 Summary:	Static dclib library
 Summary(pl):	Statyczna biblioteka dclib
-Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static dclib library.
@@ -50,10 +54,6 @@ Statyczna biblioteka dclib.
 %setup -q
 
 %build
-#%{__libtoolize}
-#%{__aclocal}
-#%{__autoconf}
-#%{__automake}
 cp -f /usr/share/automake/config.sub admin
 %configure
 %{__make}
