@@ -1,4 +1,4 @@
-%define		_beta		beta4
+%define		_beta		beta9
 %define		_release	1
 
 Summary:	dclib - libraries for Direct Connect client.
@@ -9,11 +9,11 @@ Release:	%{_beta}.%{_release}
 License:	GPL v2
 Group:		X11/Libraries
 Source0:	http://dc.ketelhot.de/files/dcgui/unstable/source/%{name}-%{version}%{_beta}.tar.bz2
+URL:		http://dc.ketelhot.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	qt-devel
-URL:		http://dc.ketelhot.de/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
