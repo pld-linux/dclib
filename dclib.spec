@@ -14,6 +14,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libxml2-devel > 2.0.0
 BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	pkgconfig
 Requires:	libxml2 > 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -84,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS NEWS README ChangeLog
+##%doc AUTHORS NEWS README ChangeLog
 %attr(755,root,root) %{_libdir}/libdc.so.*.*
 %{_datadir}/dcgui
 
@@ -93,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
 %{_includedir}/dclib
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
