@@ -1,0 +1,20 @@
+--- dclib-0.3.2/dclib/cconfig.cpp~	2004-06-03 19:05:33.000000000 +0200
++++ dclib-0.3.2/dclib/cconfig.cpp	2004-06-17 20:04:00.012849304 +0200
+@@ -1600,6 +1600,8 @@
+ 				break;
+ 		}
+ 
++		s += ",H:1";
++/*
+ 		s += ",H:";
+ 
+ 		if ( CConnectionManager::Instance() && (CConnectionManager::Instance()->GetConnectedHubCount(TRUE) > 0) )
+@@ -1610,7 +1612,7 @@
+ 		{
+ 			s += "1";
+ 		}
+-
++*/
+ 		s += ",S:";
+ 
+ 		if ( (iMaxUpload == 0) || (!CDownloadManager::Instance()) )
