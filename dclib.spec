@@ -50,6 +50,11 @@ Statyczna biblioteka dclib.
 %setup -q
 
 %build
+#%{__libtoolize}
+#%{__aclocal}
+#%{__autoconf}
+#%{__automake}
+cp -f /usr/share/automake/config.sub admin
 %configure
 %{__make}
 
