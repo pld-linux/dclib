@@ -66,7 +66,7 @@ tar xfz %{SOURCE0} -C ./
 cd $RPM_BUILD_DIR/%{name}-%{version}/dclib
 ##export UNSERMAKE=/usr/share/unsermake/unsermake
 %{__make} -f Makefile.dist
-##cp -f /usr/share/automake/config.sub admin
+cp -f /usr/share/automake/config.sub admin
 %configure --with-qt-libraries=%{_libdir}
 %{__make}
 
