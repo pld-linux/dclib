@@ -60,9 +60,8 @@ Statyczne biblioteki dclib.
 %patch0 -p1
 
 %build
-aclocal
-#%{__autoconf}
-#cp -f /usr/share/automake/config.* .
+cp -f /usr/share/automake/config.* .
+%{__make} -f Makefile.dist
 %configure
 
 %{__make}
