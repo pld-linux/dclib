@@ -1,20 +1,21 @@
-%define		_beta		beta10
+%define		_beta		beta1
 %define		_release	1
 
 Summary:	dclib - libraries for Direct Connect client.
 Summary(pl):	dclib - biblioteki dla klienta Direct Connecta.
 Name:		dclib
-Version:	0.1
+Version:	0.2
 Release:	%{_beta}.%{_release}
 License:	GPL v2
 Group:		X11/Libraries
-Source0:	http://dc.ketelhot.de/files/dcgui/unstable/source/%{name}-%{version}%{_beta}.tar.bz2
+Source0:	http://download.berlios.de/dcgui/%{name}-%{version}%{_beta}.tar.bz2
 Patch0:		%{name}-xml_ugly_fix.patch
 URL:		http://dc.ketelhot.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
+BuildRequires:	bzip2-devel
 BuildRequires:	qt-devel >= 3.0.5
 Provides:	%{name} = %{version}%{_beta}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -61,7 +62,6 @@ Statyczne biblioteki dclib.
 
 %build
 cp -f /usr/share/automake/config.* .
-%{__make} -f Makefile.dist
 %configure
 
 %{__make}
