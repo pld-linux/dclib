@@ -31,7 +31,7 @@ Biblioteki dla klienta Direct Connecta.
 Summary:	Developement files for dclib
 Summary(pl):	Pliki nag³ówkowe dla dclib
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}%{_beta}
 Provides:	%{name}-devel = %{version}%{_beta}
 
 %description devel
@@ -46,7 +46,7 @@ dclib.
 Summary:	Static libraries dclib
 Summary(pl):	Statyczne biblioteki dclib
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}%{_beta}
 Provides:	%{name}-static = %{version}%{_beta}
 
 %description static
