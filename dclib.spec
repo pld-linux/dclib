@@ -7,7 +7,7 @@ License:	GPL
 Group:		Libraries
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	0254260c91b7300a2b04e760245e1de7
-URL:		http://dc.ketelhot.de/
+URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
