@@ -3,7 +3,7 @@
 %bcond_with	lying	# lie about the H header (always H:1)
 #
 Summary:	DirectConnect support library for dcgui-qt
-Summary(pl.UTF-8):   Biblioteka obsługująca DirectConnect dla dcgui-qt
+Summary(pl.UTF-8):	Biblioteka obsługująca DirectConnect dla dcgui-qt
 Name:		dclib
 Version:	0.3.8
 Release:	1
@@ -30,7 +30,7 @@ Biblioteka obsługująca DirectConnect dla dcgui-qt.
 
 %package devel
 Summary:	Header files for dclib
-Summary(pl.UTF-8):   Pliki nagłówkowe dla dclib
+Summary(pl.UTF-8):	Pliki nagłówkowe dla dclib
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	bzip2-devel
@@ -46,7 +46,7 @@ Pliki nagłówkowe dla dclib.
 
 %package static
 Summary:	Static dclib library
-Summary(pl.UTF-8):   Statyczna biblioteka dclib
+Summary(pl.UTF-8):	Statyczna biblioteka dclib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
