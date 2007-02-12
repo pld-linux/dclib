@@ -1,6 +1,6 @@
 %define	_snap	040521
 Summary:	DirectConnect support library for dcgui-qt
-Summary(pl):	Biblioteka obs≥uguj±ca DirectConnect dla dcgui-qt
+Summary(pl.UTF-8):   Biblioteka obs≈ÇugujƒÖca DirectConnect dla dcgui-qt
 Name:		dclib
 Version:	0.3
 Release:	0.%{_snap}.1
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DirectConnect support library for dcgui-qt.
 
-%description -l pl
-Biblioteka obs≥uguj±ca DirectConnect dla dcgui-qt.
+%description -l pl.UTF-8
+Biblioteka obs≈ÇugujƒÖca DirectConnect dla dcgui-qt.
 
 %package devel
 Summary:	Header files for dclib
-Summary(pl):	Pliki nag≥Ûwkowe dla dclib
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla dclib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	bzip2-devel
@@ -37,19 +37,19 @@ Requires:	openssl-devel
 %description devel
 Header files for dclib.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla dclib.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla dclib.
 
 %package static
 Summary:	Static dclib library
-Summary(pl):	Statyczna biblioteka dclib
+Summary(pl.UTF-8):   Statyczna biblioteka dclib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static dclib library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka dclib.
 
 %prep
