@@ -5,15 +5,16 @@
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl):	Biblioteka obs³uguj±ca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.3.7
+Version:	0.3.9
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
-Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	d35833414534bcac8ce2c8a62ce903a4
+Source0:	http://dl.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
+# Source0-md5:	da6ff94795caf17de3d65858e703032a
 Patch0:		%{name}-lying_tags.patch
-URL:		http://dcgui.berlios.de/
+Patch1:		%{name}-include.patch
+URL:		http://wxdcgui.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
@@ -59,6 +60,7 @@ Statyczna biblioteka dclib.
 %prep
 %setup -q
 %{?with_lying:%patch0 -p1}
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
