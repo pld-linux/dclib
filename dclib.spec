@@ -5,18 +5,22 @@
 Summary:	DirectConnect support library for dcgui-qt
 Summary(pl.UTF-8):	Biblioteka obsługująca DirectConnect dla dcgui-qt
 Name:		dclib
-Version:	0.3.9
+Version:	0.3.10
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	da6ff94795caf17de3d65858e703032a
+# Source0-md5:	9b73b1dae2d7767452fca11a3ca61333
 Patch0:		%{name}-lying_tags.patch
 Patch1:		%{name}-include.patch
+Patch2:		%{name}-DESTDIR.patch
 URL:		http://wxdcgui.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
 BuildRequires:	openssl-devel >= 0.9.7d
 Requires:	libxml2 > 2.0.0
@@ -60,8 +64,14 @@ Statyczna biblioteka dclib.
 %setup -q
 %{?with_lying:%patch0 -p1}
 %patch1 -p1
+%patch2 -p1
 
 %build
+cp /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
