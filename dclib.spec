@@ -67,7 +67,6 @@ Statyczna biblioteka dclib.
 %patch2 -p1
 
 %build
-cp /usr/share/automake/config.sub .
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
