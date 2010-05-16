@@ -22,6 +22,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
 BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	pkgconfig
 Requires:	libxml2 > 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
