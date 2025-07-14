@@ -52,7 +52,7 @@ Pliki nagłówkowe dla dclib.
 %prep
 %setup -q
 %{?with_lying:%patch0 -p1}
-%patch1 -p1
+%patch -P1 -p1
 
 %build
 %configure PTHREAD_LIBS=-lpthread
